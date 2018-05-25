@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+                myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [55.79731, 37.53778],
+                zoom: 16
+            });
+
+            myPlacemark = new ymaps.Placemark([55.79731, 37.53778], {
+                hintContent: 'Quazar-Shop',
+                balloonContent: 'Шахматная шкатулка'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    <style>
+        #map {
+            /*width: 700px;*/
+            width: 100%;
+            height: 374px;
+            line-height: 1px;
+            *position: absolute;
+            top: 150px;
+            /*right: 50px;*/
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div id="headerMain">
+        <div id="header" style="background-image: url(img/sky-06.jpg)">
+            <div class="content">
+                <!-- Содержимое шапки -->
+                <div class="logo">
+                    <div><a href="#" style="float: left; margin-top: 2px; margin-left: 5px; margin-right: 20px;"><img src="img/chessbox_logo.jpg"></a></div>
+                </div>
+                <div class="menuMain">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a>
+                            <ul class="sm-catalog">
+                                <li><a href="catalog/chess.html">Шахматы</a>
+                                    <ul class="dropdown">
+                                        <li><a href="catalog/chess/sh-avangard-big.html">Шахматы Авангард большие</a></li>
+                                        <li><a href="catalog/chess/sh-classika-big.html">Шахматы Классика большие</a></li>
+                                        <li><a href="catalog/chess/sh-turnirnye-klen.html">Шахматы Турнирные Клен</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="catalog/figures.html">Шахматные фигуры</a>
+                                    <ul class="dropdown">
+                                        <li><a href="catalog/figures/sh-figury-avangard.html">Шахматные фигуры Авангард большие</a></li>
+                                        <li><a href="catalog/figures/sh-figury-polgar.html">Шахматные фигуры Полгар</a></li>
+                                        <li><a href="catalog/figures/sh-figury-staunton.html">Шахматные фигуры Стаунтон дуб</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="catalog/tables.html">Шахматные столы</a>
+                                    <ul class="dropdown">
+                                        <li><a href="catalog/tables/sh-stol-aragats.html">Шахматный стол Арагац</a></li>
+                                        <li><a href="catalog/tables/sh-stol-mech-davida.html">Шахматный стол Меч Давида</a></li>
+                                        <li><a href="catalog/tables/sh-stol-turnirnyj.html">Шахматный стол Турнирный американский орех</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="content">
+            <div id="map"></div>
+
+            <div class="wright2us">
+                <header>
+                    <h3>Напишите нам</h3>
+                </header>
+                <form action="" method="post">
+                    <div><b>Ваше имя (логин):</b><br>
+                        <input type="text" name="login" size="45" style="height: 24px"  placeholder="Ваше Имя" required pattern="[a-zA-Z0-9]+"></div>
+                    <div><b>Ваш почтовый ящик:</b><br>
+                        <input type="email" class="form-input" name="email" size="45" style="height: 24px" placeholder="Ваш почтовый ящик" multiple required></div>
+                    <div><b>Адрес Вашего сайта:</b><br>
+                        <input type="url" class="form-input" name="url" size="45" style="height: 24px" placeholder="Ваш сайт"></div>
+                    <div><b>Тема сообщения:</b><br>
+                        <input type="text" name="dop_text" size="45" style="height: 24px" placeholder="Тема сообщения" required></div>
+                    <div><b>Ваше сообщение:</b><br>
+                        <textarea class="form-input" wrap="hard" name="dop_text" rows="5" cols="45"  placeholder="Ваше сообщение"></textarea></div>
+                    <div><input type="submit" value="Отправить">
+                        <input type="reset" value="Очистить"></div>
+                </form>
+            </div>
+
+            <div class="address">
+                <header>
+                    <h3>Адрес</h3>
+                </header>
+                <address>
+                    <div><i> chess-shop@geekbrains.ru</i></div>
+                    <div>125167, г. Москва, метро «Аэропорт», Ленинградский проспект, дом 39, строение 79, офис Mail.Ru Group, 23 этаж</div>
+                    <div><i> +8(800)700-68-41</i></div>
+                    <div><i> Пн-Пт: 9:00-21:00</i></div>
+                    <div><i> Сб, Вс: 10:00-19:00</i></div>
+                </address>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo">
+        <div class="content">
+            &copy; 2018 Все права защищены
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

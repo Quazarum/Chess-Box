@@ -1,0 +1,523 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+a:hover {
+    background-color: #dbdbdb;
+    border-color: #ff0000;
+    outline: 0;
+}
+
+a:active {
+    background-color: #e0e0e0;
+    border-color: #dbdbdb;
+    outline: 0;
+}
+
+[class*="goods-detailed-description"] p:first-letter{
+    font-weight:bold;
+    color:#F00;
+}
+
+h1 {
+    color: lightblue;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: steelblue;
+    font-weight: 300;
+    font-family: Arial, sans-serif;
+}
+
+h3 {
+    color: purple;
+    font-weight: 200;
+    font-family: Arial, sans-serif;
+}
+
+h4 {
+    color: slateblue;
+    font-weight: 100;
+    font-family: Arial, sans-serif;
+}
+
+input {
+    border: 1px solid #cccccc;
+    border-radius: 10px/7px;
+    outline: none;
+    color: #cccccc;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+input[type="email"]:focus{
+    color: #0000ff;
+    font-weight: bold;
+    border: 1px solid #000000
+}
+
+input[type="email"]:focus {
+    background-color: yellow;
+}
+
+input[type="text"],
+input[type="textarea"] {
+    font-size: 12px;
+    color: navy;
+    background-color: #ffe;
+}
+
+input[type="textarea"] {
+    overflow: auto; /* Добавляем полосы прокрутки */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    text-transform: capitalize;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    font-size: 12px;
+    color: midnightblue;
+    background-color: #ffe;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    font-weight: bold;
+    border: 1px solid #000000;
+    color: #191970;
+    background-color: #c0c0c0;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+}
+
+input[type="email"]:-moz-placeholder { /* Firefox 18- */
+}
+
+input[type="email"]::-moz-placeholder {  /* Firefox 19+ */
+}
+
+input[type="email"]:-ms-input-placeholder {
+}
+
+ol {
+    list-style-type: none;
+}
+
+table {
+    border: 1px ridge #000000;
+}
+
+td {
+    border: 1px ridge #000000;
+    text-align: center;
+    vertical-align: middle;
+    width: 75px;
+    height: 30px;
+}
+
+th {
+    border: 1px ridge #000000;
+}
+
+tr:first-child {
+    height: 50px;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+#container {
+    min-height:100%;
+    position:relative;
+}
+
+#headerMain {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    z-index: 8;
+}
+
+#header {
+    width:100%;
+    height: 150px;
+    padding: 15px 0 15px;
+    background-size: 100%;
+    position: fixed;
+    z-index: 9;
+}
+
+#body {
+    margin: 0;
+    padding: 25px 0 70px;
+    z-index: 999;
+}
+
+#footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:70px;   /* Высота блока "footer" */
+    background: #E5BF23;
+    text-align: right;
+}
+
+#footer div  {
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#main-title {
+    height: 250px; /* Высота блока */
+    width: 600px; /* Ширина блока */
+    font-size: 48px;
+    font-weight: bold;
+    color: #2B45E0;
+    text-align: center;
+    background: url(img/chess-desk.jpg)
+}
+
+.address, .wright2us {
+    padding-left: 10px;
+}
+
+.breadcrumbs, .catalog-breadcrumbs, .chess-breadcrumbs, .figures-breadcrumbs, .tables-breadcrumbs {
+    margin: 15px 0 5px 0; /* Убираем отступы */
+    padding: 5px; /* Поля вокруг текста */
+    background: rgba(178,210,53,0.3); /* Цвет фона */
+}
+.breadcrumbs li {
+    font-size: 18px;
+    padding-top: 5px; /* Поля вокруг текста */
+    padding-right: 5px;
+}
+
+.breadcrumbs li {
+    display: inline-block; /* Размещаем список по горизонтали */
+}
+.catalog-breadcrumbs li, .chess-breadcrumbs li, .figures-breadcrumbs li,
+.tables-breadcrumbs li {
+    display: none; /* Размещаем список по горизонтали */
+}
+.catalog-breadcrumbs:hover {
+    display: block; /* Размещаем список по вертикали  при наведении*/
+}
+
+.chess-breadcrumbs:hover, .figures-breadcrumbs:hover,
+.tables-breadcrumbs:hover {
+    display: inline-block; /* Размещаем список по горизонтали при наведении */
+}
+
+.breadcrumbs a, .catalog-breadcrumbs a, .chess-breadcrumbs a, .figures-breadcrumbs a,
+.tables-breadcrumbs a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+}
+.breadcrumbs li + li:before, .chess-breadcrumbs li + li:before,
+.figures-breadcrumbs li + li:before, .tables-breadcrumbs li + li:before {
+    content: '/'; /* Разделитель ссылок */
+    padding: 0 5px; /* Расстояние вокруг разделителя */
+}
+
+.caption-border {
+    width: 400px;
+    margin: 50px auto 0;
+    border: 5px solid #E5BF23;
+    background: white;
+    padding: 10px;
+}
+
+.caption-border img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption-border figcaption {
+    padding: 10px;
+    color: white;
+    background: #E5BF23;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.catalog-category {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.catalog-subcategory {
+    width: 250px;
+    height: 250px;
+    display: inline;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.empty-left {
+    width: 100%;
+    height: 20px;
+    clear: left;
+}
+
+.form-input {
+    font-size: 12px;
+    color: magenta;
+    background-color: #ffe;
+}
+
+.goods-character li:before {
+    content: "✿";
+    padding-right: 7px;
+    color: red;
+}
+
+.goods-description {
+    float: right;
+}
+
+.goodsImageBig {
+    float: left;
+}
+
+.gradient-border {
+    width: 400px;
+    margin: 50px auto 0;
+}
+
+.gradient-border img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 15px solid;
+    border-image: linear-gradient(135deg, #857667 38%, #FDD6B9 65%);
+    border-image-slice: 1;
+}
+
+.gradient-border img:hover {
+    border-color: #ffffff;
+    border-image: none;
+    /*outline: none;*/
+}
+
+.gradient-border figcaption {
+    padding: 10px;
+    background: linear-gradient(135deg, #857667 38%, #FDD6B9 65%);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.gradient-border figcaption:hover {
+    padding: 10px;
+    background: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.goods-title {
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+}
+
+.goods-short-description {
+    color: #707070;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.goods-detailed-description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.goods-detailed-description p::first-letter {
+    font-weight:bold;
+    font-size: 16px;
+    color:#F00;
+    font-family: "Arial Black", sans-serif;
+}
+
+.goods-property p::first-letter{
+    font-weight:bold;
+    font-size: 16px;
+    color:#F00;
+    font-family: "Arial Black", sans-serif;
+}
+
+.goods-property {
+    color: #484343;
+    font-size: 14px;
+    font-weight: 200;
+    font-style: italic;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.letter {
+    color: red;
+    font-size: 200%;
+    font-family: serif;
+    position: relative;
+    top: 5px;
+}
+
+.logo {
+    position: relative;
+    top: 25%;
+    left: 10px;
+    float: left;
+}
+
+.logo div a {
+    display: block;
+    vertical-align: middle;
+}
+
+.menuMain {
+    float:left;
+    padding:0 0 20px;
+    text-align:center;
+}
+.menuMain ul{
+    display:block;
+    height:40px;
+    padding:0 20px;
+    background:#F47F20;
+}
+.menuMain li{
+    display:inline-block;
+    margin:0 -2px;
+    position:relative;
+}
+.menuMain li a{
+    display:block;
+    height:20px;
+    padding:10px 15px;
+    line-height:20px;
+    color:#fff;
+    font-weight:700;
+    text-decoration:none;
+    /*outline:1px solid crimson;*/
+    transition: 0.3s linear;
+}
+.menuMain li a:hover{
+    /*background:#454595;*/
+    background:#2C3093;
+}
+.menuMain li ul{
+    height:auto;
+    background:#2C3093;
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    z-index:5;
+    width:250px;
+    text-align:left;
+    font-size:90%;
+    padding:0;
+}
+.menuMain li:hover > a{
+    /*background:#454595;*/
+    background:#2C3093;
+    transition: 0.3s linear;
+}
+.menuMain li li{
+    display:block;
+}
+.menuMain li li a{
+    height:auto;
+    padding:7px 10px;
+}
+.menuMain li li a:hover{
+    background:#F47F20;
+}
+.menuMain li:hover > ul{
+    display:block;
+}
+.menuMain li li ul{
+    top:0;
+    left:250px;
+}
+.menuMain li li:hover > a{
+    background:#F47F20;
+}
+
+.menuMain li:hover .sm-catalog {
+    opacity: 1;
+    visibility: visible;
+    text-decoration: underline;
+    -webkit-transition: 0.24s linear opacity;
+}
+
+.new:after {
+    content: "Новинка!!!";
+    color: red;
+    font-size: 150%;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.textalign {
+    position: relative;
+    float: left;
+}
+
+.text-shadow-3d {
+    color: blue;
+    text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
+}
+
+.outer:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+}
+
+.inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vertical {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
